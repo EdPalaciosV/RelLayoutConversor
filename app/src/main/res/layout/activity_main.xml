@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/banderaMex"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/mxn" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/campoPeso"
+        android:gravity="end"
+        android:hint="MXN"
+        android:layout_toRightOf="@id/banderaMex"
+        android:layout_alignBottom="@id/banderaMex"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:src="@drawable/usd"
+        android:layout_marginRight="10dp"
+        android:id="@+id/banderaUsa"
+        android:layout_below="@id/banderaMex"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/campoDolar"
+        android:layout_toRightOf="@id/banderaUsa"
+        android:layout_alignBottom="@id/banderaUsa"
+        android:gravity="end"
+        android:hint="USD"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/rGroup"
+        android:layout_below="@+id/banderaUsa">
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertir Peso a dolar"
+        android:id="@+id/convertirPesoDolar"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convertir Peso a dolar"
+            android:id="@+id/convertirDolarPeso"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn"
+        android:text="Convertir"
+        android:onClick="onclickButton"
+        android:layout_below="@+id/rGroup"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/res"
+        android:textSize="20sp"
+        android:text="Resultado"
+        android:layout_below="@id/btn"
+        />
+
+
+</RelativeLayout>
